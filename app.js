@@ -9,15 +9,15 @@ angular.module('app', [])
 
     $scope.calc = function(){
         var Array = "," + $scope.product + ",";
-        var SplitArray = Array.split(/,[\s,]*/);
+        var Split = Array.split(/,[\s,]*/);
         
-        SplitArray.pop();
-        SplitArray.shift();
+        Split.pop();
+        Split.shift();
 
-        if(SplitArray.length == 0){
+        if(Split.length == 0){
             $scope.result = "Будь ласка, уведіть дані!";
         }
-        else if(SplitArray.length <= 3){
+        else if(Split.length <= 3){
             $scope.result = "На здоров'я!";
         }
         else{
